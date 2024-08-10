@@ -1,21 +1,27 @@
 import './card.css'
-import logo from './logoquadrado.jpg'
+import araras from './araras.jfif'
+import cordeiropolis from './cordeiropolis.jpg'
+import rioclaro from './rioclaro.jpg'
+
 
 export default function Card() {
 
     const data = [
         {
-        nome: 'Araras',
-        endereco: 'Rua Coronel Justiniano, 509 - Centro',
-        url: 'https://192.168.99.101:3000'
+            nome: 'Araras',
+            imagem: araras,
+            endereco: 'Rua Coronel Justiniano, 509 - Centro',
+            url: 'https://192.168.99.101:3000'
         },
         {
             nome: 'Cordeirópolis',
+            imagem: cordeiropolis,
             endereco: 'Rua Guilherme Krauter, 507 - Centro',
             url: 'https://192.168.0.123:3000'
         },
         {
             nome: 'Rio Claro',
+            imagem: rioclaro,
             endereco: 'Rua Dois, 635 - Saúde',
             url: 'https://192.168.0.221:3000'
         }
@@ -27,7 +33,7 @@ export default function Card() {
         data.map( unidade => {
             return (
                 <div class="ui card modelcard" style={{margin: 0}}>
-                    <img src={logo} alt="Imagem da unidade centro médico de saúde ocupacional"></img>
+                    <img src={unidade.imagem} alt="Imagem da unidade centro médico de saúde ocupacional"></img>
                         <div class="content">
                             <div class="header">{unidade.nome}</div>
                             <div class="description">
