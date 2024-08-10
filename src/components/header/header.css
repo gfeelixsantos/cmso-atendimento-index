@@ -1,0 +1,14 @@
+#header {
+    margin: 2rem;
+}
+
+#headername {
+    color: #ffff !important;
+    font-size: 4rem;
+    border-bottom: 1px solid #ffff;
+}
+
+#subheadername {
+    font-size: 2rem;
+    color: #b7b7b7
+}
