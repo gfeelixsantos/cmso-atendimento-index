@@ -1,4 +1,4 @@
-import card from './card.css'
+import './card.css'
 import logo from './logoquadrado.jpg'
 
 export default function Card() {
