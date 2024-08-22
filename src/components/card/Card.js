@@ -11,7 +11,7 @@ export default function Card() {
             nome: 'Araras',
             imagem: araras,
             endereco: 'Rua Coronel Justiniano, 509 - Centro',
-            url: 'https://192.168.99.101:3000'
+            url: 'https://192.168.99.104:3000'
         },
         {
             nome: 'Cordeirópolis',
