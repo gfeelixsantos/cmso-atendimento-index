@@ -17,7 +17,7 @@ export default function Card() {
             nome: 'Cordeirópolis',
             imagem: cordeiropolis,
             endereco: 'Rua Guilherme Krauter, 507 - Centro',
-            url: 'https://192.168.0.123:3000'
+            url: 'https://192.168.0.124:3000'
         },
         {
             nome: 'Rio Claro',
