@@ -2,6 +2,7 @@ import './card.css'
 import araras from './araras.jfif'
 import cordeiropolis from './cordeiropolis.jpg'
 import rioclaro from './rioclaro.jpg'
+import digital from './digital.png'
 
 
 export default function Card() {
@@ -24,7 +25,13 @@ export default function Card() {
             imagem: rioclaro,
             endereco: 'Rua Dois, 635 - Saúde',
             url: 'https://192.168.0.221:3000'
-        }
+        },
+        {
+            nome: 'CMSO 360',
+            imagem: digital,
+            endereco: 'Atendimento digital',
+            url: 'https://cmso360-frontend.vercel.app/'
+        },
     ]
 
     
