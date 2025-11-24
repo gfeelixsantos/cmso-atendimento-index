@@ -1,5 +1,61 @@
+/* Container CSS Grid para o layout 3 por linha */
+.cards-container {
+    display: grid;
+    /* Por padrão, tenta encaixar o máximo de colunas com min 280px */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 20px; /* Espaço entre os cards */
+    padding: 20px;
+    justify-items: center; /* Centraliza os itens no grid */
+}
+
+/* --- Media Queries para Forçar 3 por Linha e Responsividade --- */
+
+/* Telas Médias e Grandes (a partir de 900px, por exemplo): 3 cards por linha */
+@media (min-width: 900px) {
+    .cards-container {
+        /* Força 3 colunas de tamanho igual (1fr) */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+/* Telas Pequenas (entre 600px e 899px): 2 cards por linha */
+@media (min-width: 600px) and (max-width: 899px) {
+    .cards-container {
+        /* Força 2 colunas de tamanho igual (1fr) */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Telas muito pequenas (até 599px): 1 card por linha */
+@media (max-width: 599px) {
+    .cards-container {
+        /* Força 1 coluna, ocupando 100% da largura */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilo Básico do Card (Mantido, mas sem precisar de cálculos complexos) */
 .modelcard {
-    -webkit-box-shadow: 10px 12px 31px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 12px 31px -3px rgba(0,0,0,0.75);
-    box-shadow: 10px 12px 31px -3px rgba(0,0,0,0.75) !important;
+    width: 100%; /* Ocupa a largura total da coluna do grid */
+    max-width: 350px; /* Garante que o card não fique muito largo */
+    margin: 0 !important; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex !important;
+    flex-direction: column;
+}
+
+.modelcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modelcard img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.ui.button {
+    margin-top: auto; 
 }

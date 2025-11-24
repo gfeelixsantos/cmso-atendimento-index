@@ -3,10 +3,13 @@ import araras from './araras.jfif'
 import cordeiropolis from './cordeiropolis.jpg'
 import rioclaro from './rioclaro.jpg'
 import digital from './digital.png'
+import tv from './tv.png'
+import ticket from "./ticket.png"
 
 
 export default function Card() {
 
+    const baseUrl = 'https://cmso360-frontend.vercel.app/'
     const data = [
         {
             nome: 'Araras',
@@ -30,33 +33,49 @@ export default function Card() {
             nome: 'CMSO 360',
             imagem: digital,
             endereco: 'Atendimento digital',
-            url: 'https://cmso360-frontend.vercel.app/'
+            url: baseUrl
+        },
+        {
+            nome: 'Painel 360',
+            imagem: tv,
+            endereco: 'Painel chamada',
+            url: `${baseUrl}painel`
+        },
+        {
+            nome: 'Senha 360',
+            imagem: ticket,
+            endereco: 'Emissor senha',
+            url: `${baseUrl}ticket`
         },
     ]
-
     
 
+    
     return(
-        data.map( unidade => {
-            return (
-                <div class="ui card modelcard" style={{margin: 0}}>
-                    <img src={unidade.imagem} alt="Imagem da unidade centro médico de saúde ocupacional"></img>
-                        <div class="content">
-                            <div class="header">{unidade.nome}</div>
-                            <div class="description">
-                                {unidade.endereco}
+        // Adicionando um container para gerenciar o layout flexível
+        <div className="cards-container">
+            {data.map( unidade => {
+                return (
+                    // Removendo os estilos inline desnecessários e usando apenas a classe CSS
+                    <div className="ui card modelcard" key={unidade.nome}> 
+                        <img src={unidade.imagem} alt="Imagem da unidade centro médico de saúde ocupacional" width={60} />
+                            <div className="content">
+                                <div className="header">{unidade.nome}</div>
+                                <div className="description">
+                                    {unidade.endereco}
+                                </div>
                             </div>
-                        </div>
-                        <a class="ui animated orange button" href={unidade.url}>
-                            <div class="visible content">Acessar</div>
-                            <div class="hidden content">
-                                <i class="right arrow icon"></i>
-                            </div>
-                        </a>
-                </div>
-            )
-            
-        })
+                            <a className="ui animated orange button" href={unidade.url}>
+                                <div className="visible content">Acessar</div>
+                                <div className="hidden content">
+                                    <i className="right arrow icon"></i>
+                                </div>
+                            </a>
+                    </div>
+                )
+                
+            })}
+        </div>
         
     )
 }
