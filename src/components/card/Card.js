@@ -27,7 +27,7 @@ export default function Card() {
             nome: 'Rio Claro',
             imagem: rioclaro,
             endereco: 'Rua Dois, 635 - Saúde',
-            url: 'https://192.168.0.221:3000'
+            url: 'https://172.17.10.30:3377'
         },
         {
             nome: 'CMSO 360',
